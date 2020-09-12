@@ -8,13 +8,13 @@
       service:
           name: nginx
           state: started
-      tag: start_nginx
+      tags: start_nginx
     - name: stop nginx
       service:
           name: nginx
           state: stopped
-      tag: stop_nginx
+      tags: stop_nginx
     - name: ensure nginx is not installed
       apt: name=nginx state=absent
-      tag: ensure_nginx
+      tags: ensure_nginx
  
