@@ -3,9 +3,9 @@
   tasks:
     - name: downloading docker script from https://get.docker.com/
       get_url:
-      url: https://get.docker.com/
-      dest: /var/docker.sh
-      mode: '0777'
+        url: https://get.docker.com/
+        dest: /var/docker.sh
+        mode: '0777'
     # - name: rename docker
     #   command: mv index.html docker.sh
     # - name: permission adding
