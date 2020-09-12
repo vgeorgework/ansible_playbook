@@ -3,8 +3,18 @@
   tasks:
     - name: ensure nginx is at the latest version
       apt: name=nginx state=latest
+      tags: install_nginx
     - name: start nginx
       service:
           name: nginx
           state: started
+      tag: start_nginx
+    - name: stop nginx
+      service:
+          name: nginx
+          state: stopped
+      tag: stop_nginx
+    - name: ensure nginx is not installed
+      apt: name=nginx state=absent
+      tag: ensure_nginx
  
