@@ -16,5 +16,5 @@
       tags: stop_nginx
     - name: ensure nginx is not installed
       apt: name=nginx state=absent
-      tags: ensure_nginx
+      tags: uninstall_nginx
  
