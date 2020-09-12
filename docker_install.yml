@@ -1,0 +1,13 @@
+---
+- hosts: all
+  tasks:
+    - name: downloading docker script from https://get.docker.com/
+      command: wget https://get.docker.com/
+    - name: rename docker
+      command: mv index.html docker.sh
+    - name: permission adding
+      command: chmod 777 docker.sh
+    - name: run docker script
+      script:
+        cmd: docker.sh start
+          
